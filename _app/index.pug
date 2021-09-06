@@ -1,0 +1,39 @@
+-var path = '';
+-var head_url = 'https://popov.mastervision.su/developmenting-extras/';
+-var head_title = '«Введение в эзотерику. Путешествие души. Как развить в себе спящие сверхспособности»';
+-var head_description = '3-дневный онлайн мастер-класс Василия Попова';
+-var head_img = 'img/banner.jpg';
+-var styles = path+'css/styles.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var libs = path+'js/libs.min.js';
+-var scripts = path+'js/scripts.js';
+-var noref = true;
+-var action = '';
+-var group = '';
+-var formId = '';
+-var formVc = '';
+-var ak = true;
+//- -var footer_title = true;
+//- -var oferta = 'https://mastervision.su/oferta.docx';
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/main/1-main
+		include pug/main/2-video
+		include pug/main/3-for
+		include pug/main/4-plan
+		include pug/main/5-reach
+		include pug/main/6-author
+		include pug/main/7-revs
+		include pug/main/8-last
+		include pug/base/2-footer
+		include pug/main/9-modal
+		include pug/base/3-scripts
+		include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
