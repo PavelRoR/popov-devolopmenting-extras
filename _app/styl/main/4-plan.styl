@@ -1,0 +1,94 @@
+#plan
+	padding 100px 0
+	background-color: #F4E7DD
+	.container
+		position relative
+.days-buttons
+	position relative
+	padding 13px 30px
+	border-bottom: 2px solid #000
+	border-left: 2px solid #000
+	display inline-block
+	&:before
+		content: ''
+		display block
+		position absolute
+		width 200%
+		height: 2px
+		background-color: #000
+		bottom: -2px
+		left -200%
+	li
+		list-style none
+		display inline-block
+		font-family: NS
+		font-size: 25px
+		font-weight: bold
+		&:nth-child(2)
+			margin 0 70px
+		a
+			display block
+			position relative
+			color #000
+			transition: all .4s ease
+			&:hover
+				color #000
+				transform scale(1.5)
+				top -4px
+				left 4px
+		&.active
+			a
+				transform scale(1.5)
+				top -4px
+				left 4px
+.plan-img
+	position absolute
+	top -100px
+	right -100px
+.tab-content > .tab-pane
+	display: none;
+.tab-content > .active
+	display: block;
+.day
+	&-title
+		font-family: NS
+		font-size: 20px
+		font-weight: bold
+		margin 30px
+	&-list
+		li
+			list-style: none
+			position relative
+			margin-bottom: 15px
+			padding-left: 48px
+			font-family: NS
+			&:before
+				content: ''
+				display block
+				position absolute
+				top 8px
+				left 0
+				border-radius: 50%
+				width 12px
+				height: 12px
+				border 1px solid #000
+			span
+				font-weight: bold
+	&-bonus
+		position relative
+		font-family: NS
+		margin 45px 0 45px 30px
+		width 100%
+		max-width 760px
+		span
+			font-weight: bold
+		&:before
+			content: ''
+			display block
+			position absolute
+			top -7px
+			left -15px
+			width 38px
+			height: 38px
+			border-top: 1px solid #000
+			border-left: 1px solid #000
