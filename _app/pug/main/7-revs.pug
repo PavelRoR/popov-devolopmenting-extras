@@ -1,3 +1,34 @@
 section#revs
 	.container
 		+gt('general-title-center', 'Отзывы')
+		.text-revs
+			.row
+				.col-md-6
+					a.text-rev-link(href=path+"img/revs/text-1.png")
+						+imgs('text-rev-img', 'img/revs/text-1.min.png', 'Отзыв 1')
+				.col-md-6
+					a.text-rev-link(href=path+"img/revs/text-2.png")
+						+imgs('text-rev-img', 'img/revs/text-2.min.png', 'Отзыв 2')
+			.row
+				.col-md-6
+					a.text-rev-link(href=path+"img/revs/text-3.png")
+						+imgs('text-rev-img', 'img/revs/text-3.min.png', 'Отзыв 3')
+				.col-md-6
+					a.text-rev-link(href=path+"img/revs/text-4.png")
+						+imgs('text-rev-img', 'img/revs/text-4.min.png', 'Отзыв 4')
+		.video-revs
+			+gt('general-title-center', 'Видео-отзывы')
+			.row
+				.col-md-6
+					.video-wrapper.video-wrapper-rev(data-youtube="fjZBz6w-Gdg" data-img=path+"img/revs/video-1.jpg")
+						img(src=path+"img/revs/video-1.jpg", alt="Отзыв 1")
+						.yt-button
+				.col-md-6
+					.video-wrapper.video-wrapper-rev(data-youtube="eS7i4s_mMX0" data-img=path+"img/revs/video-2.jpg")
+						img(src=path+"img/revs/video-2.jpg", alt="Отзыв 2")
+						.yt-button
+			.row
+				.col-md-6.col-md-offset-3
+					.video-wrapper.video-wrapper-rev(data-youtube="kBf0ImzbQmA" data-img=path+"img/revs/video-3.jpg")
+						img(src=path+"img/revs/video-3.jpg", alt="Отзыв 3")
+						.yt-button
