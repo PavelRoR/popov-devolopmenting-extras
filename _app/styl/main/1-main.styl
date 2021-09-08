@@ -1,27 +1,46 @@
 #main
 	padding 0 0 120px
+	overflow hidden
+	@media screen and (max-width 991px)
+		padding 0 0 60px
+		text-align center
+	@media screen and (max-width 386px)
+		padding 0 0 40px
 .main
 	&-title
-		font-family: NS
 		font-size: 24px
 		font-weight: bold
 		color #743F3F
 		margin 80px 0 10px
+		@media screen and (max-width 1199px)
+			margin-top: 15px
+		@media screen and (max-width 386px)
+			font-size: 22px
 	&-subtitle
-		font-family: NS
 		font-size: 18px
 		margin-bottom: 35px
+		@media screen and (max-width 386px)
+			margin-bottom: 20px
 	&-info
 		position absolute
-		bottom: -199px
+		bottom: -203px
 		left 0
+		@media screen and (max-width 991px)
+			position: static
+		@media screen and (max-width 386px)
+			margin-bottom: 30px
 		&-text
+			text-align left
 			display inline-block
 			padding 15px 0 30px
 			position relative
-			font-family: NS
 			font-size: 22px
 			color #747474
+			@media screen and (max-width 560px)
+				font-size: 20px
+			@media screen and (max-width 386px)
+				display block
+				text-align center
 			span
 				display block
 				color #464646
@@ -31,6 +50,10 @@
 					color #A7A7A7
 					bottom: 10px
 					left 0
+					@media screen and (max-width 386px)
+						margin 0 auto
+						left 0
+						right 0
 			&:last-of-type
 				margin-left: 108px
 				&:before
@@ -42,6 +65,16 @@
 					background-color: #747474
 					top 0
 					left -54px
+				@media screen and (max-width 386px)
+					margin 31px 0 0
+					&:before
+						width 100%
+						max-width 200px
+						height 1px
+						top -15px
+						left 0
+						right 0
+						margin 0 auto
 	&-img
 		display block
 		width 100%
@@ -50,6 +83,8 @@
 .form-main
 	width 100%
 	max-width 535px
+	@media screen and (max-width 991px)
+		margin 0 auto 50px
 .input
 	background-color: #fff
 	border 2px solid #A4A4A4
@@ -110,10 +145,11 @@ input:-webkit-autofill
 	margin-left: 0
 	@media screen and (max-width 991px)
 		max-width 380px
+		margin-left: auto
 	@media screen and (max-width 560px)
 		margin 10px auto 0
 .checking .check-label
-	line-height: 27px;
+	line-height: 24px;
 	cursor: pointer;
 	position: relative;
 	display: table-cell;

@@ -1,10 +1,12 @@
 .general-title
-	font-family: NS
 	font-size: 27px
 	font-weight: bold
 	margin-bottom: 45px
 	&-center
 		text-align center
+	@media screen and (max-width 560px)
+		font-size: 24px
+		margin-bottom: 30px
 .general-list
 	li
 		list-style: none
@@ -24,3 +26,17 @@
 			background-color: #743F3F
 		&:last-child
 			margin-bottom: 0
+		@media screen and (max-width 991px)
+			font-size: 20px
+			margin-bottom: 30px
+			&:before
+				top 16px
+		@media screen and (max-width 560px)
+			font-size: 18px
+			margin-bottom: 20px
+			padding-left: 30px
+			&:before
+				width 20px
+				top 14px
+		@media screen and (max-width 386px)
+			margin-bottom: 10px

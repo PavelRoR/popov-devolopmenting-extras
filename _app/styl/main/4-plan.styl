@@ -3,12 +3,20 @@
 	background-color: #F4E7DD
 	.container
 		position relative
+	@media screen and (max-width 991px)
+		padding 60px 0
+	@media screen and (max-width 386px)
+		padding 40px 0
 .days-buttons
 	position relative
 	padding 13px 30px
 	border-bottom: 2px solid #000
 	border-left: 2px solid #000
 	display inline-block
+	@media screen and (max-width 560px)
+		padding 10px 20px
+	@media screen and (max-width 386px)
+		padding 10px 15px
 	&:before
 		content: ''
 		display block
@@ -21,11 +29,16 @@
 	li
 		list-style none
 		display inline-block
-		font-family: NS
 		font-size: 25px
 		font-weight: bold
+		@media screen and (max-width 560px)
+			font-size: 20px
 		&:nth-child(2)
 			margin 0 70px
+			@media screen and (max-width 560px)
+				margin 0 30px
+			@media screen and (max-width 386px)
+				margin 0 15px
 		a
 			display block
 			position relative
@@ -34,34 +47,55 @@
 			&:hover
 				color #000
 				transform scale(1.5)
-				top -4px
-				left 4px
+				top -5px
+				left 5px
+				@media screen and (max-width 560px)
+					transform: scale(1.3)
+					top -3px
+					left 3px
 		&.active
 			a
 				transform scale(1.5)
-				top -4px
-				left 4px
+				top -5px
+				left 5px
+				@media screen and (max-width 560px)
+					transform: scale(1.3)
+					top -3px
+					left 3px
 .plan-img
 	position absolute
 	top -100px
 	right -100px
+	@media screen and (max-width 991px)
+		display block
+		position: static
+		width 100%
+		max-width 463px
+		margin 50px auto 0
+	@media screen and (max-width 386px)
+		margin-right: -15px
 .tab-content > .tab-pane
 	display: none;
 .tab-content > .active
 	display: block;
 .day
 	&-title
-		font-family: NS
 		font-size: 20px
 		font-weight: bold
 		margin 30px
+		@media screen and (max-width 560px)
+			margin 20px
 	&-list
 		li
 			list-style: none
 			position relative
 			margin-bottom: 15px
 			padding-left: 48px
-			font-family: NS
+			@media screen and (max-width 560px)
+				padding-left: 32px
+			@media screen and (max-width 386px)
+				padding-left: 20px
+				margin-bottom: 10px
 			&:before
 				content: ''
 				display block
@@ -72,14 +106,22 @@
 				width 12px
 				height: 12px
 				border 1px solid #000
+				@media screen and (max-width 560px)
+					width: 8px
+					height: 8px
+					top 12px
 			span
 				font-weight: bold
 	&-bonus
 		position relative
-		font-family: NS
 		margin 45px 0 45px 30px
 		width 100%
 		max-width 760px
+		@media screen and (max-width 991px)
+			margin-left: 0
+			padding-left: 30px
+		@media screen and (max-width 560px)
+			margin: 30px 0
 		span
 			font-weight: bold
 		&:before
@@ -92,3 +134,5 @@
 			height: 38px
 			border-top: 1px solid #000
 			border-left: 1px solid #000
+			@media screen and (max-width 991px)
+				left 15px
