@@ -1,0 +1,41 @@
+setctio#get
+	.container
+		+gt('', 'Что вы получите пройдя курс:')
+		.get-items
+			ul.nav.nav-tabs.get-items-buttons#get-items(role="tablist")
+				li(role="presentation").active
+					a(href="#get-item-1" aria-controls="get-item-1" role="tab" data-toggle="tab") Чувствование энергий руками
+				li(role="presentation")
+					a(href="#get-item-2" aria-controls="get-item-2" role="tab" data-toggle="tab") Видение ауры и чакр
+				li(role="presentation")
+					a(href="#get-item-3" aria-controls="get-item-3" role="tab" data-toggle="tab") Изменение личности
+				li(role="presentation")
+					a(href="#get-item-4" aria-controls="get-item-4" role="tab" data-toggle="tab") Третий глаз
+			.tab-content.get-items-container
+				.tab-pane.fade.in.get-item-body.active(role="tabpanel")#get-item-1
+					ul.get-item-list
+						li Это необходимый навык для полноценной практики Йоги и Ци-гун, где энергетические потоки необходимо чувствовать во время всех практик. Это позволит вам определять такие параметры:
+						li Живой объект или нет
+						li Здоровый орган или проблемный
+						li Ощущение мест негативного воздействия, таких как: сглаз, порча, проклятье
+				.tab-pane.fade.day-body(role="tabpanel")#get-item-2
+					ul.get-item-list
+						li Данный навык значительно расширит ваше восприятие себя и окружающих, поможет понять энергетические "неполадки" в организме и устранить их быстро и легко, а так же:
+						li Способность знать скрытую информацию от постороннего наблюдателя
+						li Видение и ощущение резонансов чакр другого человека
+						li Возможность точной сонастройки с другими людьми
+				.tab-pane.fade.day-body(role="tabpanel")#get-item-3
+					ul.get-item-list
+						li С помощью техник данного курса вам будет дана уникальная возможность менять свои черты личности в соответствии с вашими потребностями.
+						li Удаление ненужных эмоциональных состояний: страх, боль, агрессия и др.
+						li Изменение (усиление, ослабление) черт вашей личности, характера
+						li "Запись" желаемых черт личности, которые у вас пока отсутствуют
+				.tab-pane.fade.day-body(role="tabpanel")#get-item-4
+					p.get-item-text В рамках курса будет дан навык работы с "третьим глазом" в четырех различных аспектах. Спектр применения данных техник очень широк и охватывает все сферы жизни, и также, дает возможность воздействия на объекты в этих аспектах:
+					ul.get-item-list
+						li Видение структуры объекта
+						li Видение прошлого
+						li Видение настоящего
+						li Видение будущего
+			+b('button-wrapper-center', 'button-up', href, 'Иду на курс')
+		+imgs('plan-img', 'img/images/plan.png', 'Картинка блока')

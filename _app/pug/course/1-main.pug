@@ -1,0 +1,16 @@
+section#main
+	.container
+		.row
+			.col-md-8
+				.content
+					p.main-pre Обучающий курс
+					h1.main-title=head_title
+					.main-info
+						p.main-info-text Даты: 
+							span NN сентября
+							span.main-date-time 19:00 мск
+						p.main-info-text Автор: 
+							span Василий Попов
+					+b('', 'button-brown button-up', href, 'Записаться')
+			.col-md-4
+				+imgs('main-img', 'img/images/main.png', 'Картинка блока')

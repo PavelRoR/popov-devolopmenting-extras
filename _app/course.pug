@@ -1,0 +1,51 @@
+-var path = '../';
+-var head_url = 'https://popov.mastervision.su/developmenting-extras/course/';
+-var head_title = '«Третий глаз»';
+-var head_description = 'Обучающий курс Василия Попова';
+-var styles = path+'css/course.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var libs = path+'js/course-libs.min.js';
+-var scripts = path+'js/course.js';
+-var noref = true;
+-var tk = true;
+-var ah = true;
+-var href = '#prices';
+-var footer_title = true;
+-var oferta = 'https://mastervision.su/oferta-s.docx';
+-var courseP = true;
+
+mixin b(cl, clb, href, p, target, id)
+	.button-wrapper(class=cl)
+		a.button(class=clb href!=href target=target id=id)=p
+mixin gt(cl, h3)
+	h3.general-title(class=cl)=h3
+mixin imgs(cl, src ,alt)
+	img(class=cl src=path+src alt=alt)
+mixin gul(cl, ...items)
+	ul.general-list(class='general-list-'+cl)
+		each item in items
+			li=item
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		.wrapper
+			include pug/base/1-header
+			include pug/course/1-main
+			include pug/course/2-why
+			include pug/course/3-plan
+			include pug/course/4-get
+			include pug/course/5-prices
+			include pug/main/6-author
+			include pug/main/7-revs
+			include pug/main/8-last
+		include pug/base/2-footer
+		include pug/base/3-scripts
+		include pug/course/6-modal
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts

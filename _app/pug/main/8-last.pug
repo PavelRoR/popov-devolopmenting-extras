@@ -1,5 +1,8 @@
 section#last
 	.container
-		h3.last-title Начните сейчас, это бесплатно
+		if mainP
+			h3.last-title Начните сейчас, это бесплатно
+		if courseP
+			h3.last-title Начните сейчас
 		p.last-text Более 20 000 учеников доверяют нам и реализуют свои цели
 		+b('button-wrapper-center', 'button-brown button-up', href, 'Записаться')

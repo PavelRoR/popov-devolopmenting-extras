@@ -1,0 +1,26 @@
+section#prices
+	.container
+		.packet
+			.packet-title
+				h4.packet-head-title
+					small Обучающий курс
+					|=head_title
+				p.packet-head-text 10 уроков
+				a.more-button(href='#Modal') подробнее...
+			.packet-body
+				p.cost.cost-full Стоимость:
+					span 14 900р.
+				p.cost.cost-sale Скидка:
+					span 2 000р.
+				p.cost.cost-today Стоимость сегодня:
+					span 12 900р.
+				+b('button-wrapper-center', '', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1168&clean=true&lg=ru', 'Записаться', '_blank')
+		.prepayment
+			h4.prepayment-title Акция!
+			p.prepayment-text Платите 
+				span 1 000р., 
+				| бонусом получаете 
+				span 1 000р.
+				|  На счет зачисляется 
+				span 2 000р.. 
+			+b('' ,'button-prepayment', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1174&clean=true&lg=ru','Оплатить 1 000р.', '_blank')
