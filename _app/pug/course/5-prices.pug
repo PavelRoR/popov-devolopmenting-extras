@@ -1,26 +1,42 @@
 section#prices
 	.container
+		+imgs('prices-img prices-img-1', 'img/images/reach.png', 'ИньЯн')
 		.packet
-			.packet-title
+			.packet-head
 				h4.packet-head-title
 					small Обучающий курс
-					|=head_title
+					=head_title
 				p.packet-head-text 10 уроков
 				a.more-button(href='#Modal') подробнее...
 			.packet-body
+				<?php if($now < $dates[1]){;?>
 				p.cost.cost-full Стоимость:
 					span 14 900р.
 				p.cost.cost-sale Скидка:
-					span 2 000р.
+					span#sale <?=$sale;?>
 				p.cost.cost-today Стоимость сегодня:
-					span 12 900р.
-				+b('button-wrapper-center', '', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1168&clean=true&lg=ru', 'Записаться', '_blank')
+					span#today <?=$today;?>
+				+b('button-wrapper-center', '', '<?=$link;?>', 'Записаться', '_blank', 'link')
+				<?php } else {;?>
+				p.cost.cost-full Стоимость:
+					span.unbroken 14 900р.
+				+b('button-wrapper-center', '', '<?=$link;?>', 'Записаться', '_blank')
+				<?php };?>
+		<?php if($now < $dates[2]):?>
 		.prepayment
 			h4.prepayment-title Акция!
 			p.prepayment-text Платите 
 				span 1 000р., 
-				| бонусом получаете 
+				|  бонусом получаете 
 				span 1 000р.
-				|  На счет зачисляется 
-				span 2 000р.. 
-			+b('' ,'button-prepayment', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1174&clean=true&lg=ru','Оплатить 1 000р.', '_blank')
+				br 
+				| На счет зачисляется 
+				span 2 000р.
+			+b('' ,'button-prepayment', '<?=$prepLink;?>','Оплатить 1 000р.', '_blank', 'prepLink')
+		<?php endif;?>
+		<?php if($now < $dates[1]):?>
+		.timer.hide
+			h4.timer-title Скидка уменьшится через:
+			.clock
+		<?php endif;?>
+		+imgs('prices-img prices-img-2', 'img/images/reach.png', 'ИньЯн')

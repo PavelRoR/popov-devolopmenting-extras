@@ -1,0 +1,53 @@
+.white-popup
+	position: relative;
+	background: #FFF;
+	padding: 50px 50px 160px;
+	width: auto;
+	max-width: 900px;
+	margin: 20px auto;
+	background-image: url(../img/images/plan.png)
+	background-repeat: no-repeat
+	background-position: bottom -50px right -80px
+	background-size 200px
+	@media screen and (max-width 560px)
+		padding 30px 30px 160px
+	@media screen and (max-width 386px)
+		padding 30px 20px 120px
+		background-position: bottom -80px right -110px
+.mfp-close-btn-in .mfp-close
+	transition all .2s ease
+.mfp-fade.mfp-bg
+	opacity: 0;
+	transition: all 0.15s ease-out;
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: 0.8;
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0;
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0;
+	transition: all 0.15s ease-out;
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1;
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0;
+.modal-list
+	li
+		font-style: 20px
+		margin-bottom: 20px
+		position relative
+		list-style: none
+		padding-left: 20px
+		&:last-child
+			margin-bottom: 0
+		span
+			font-weight: bold
+		&:before
+			content: ''
+			display block
+			position absolute
+			width 10px
+			height: 10px
+			border-radius: 50px
+			border 1px solid
+			top 10px
+			left 0

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php require_once('vars.php');?> 
+ 
+ <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
@@ -42,7 +44,7 @@
                 <p class="main-pre">Обучающий курс</p>
                 <h1 class="main-title">«Третий глаз»</h1>
                 <div class="main-info">
-                  <p class="main-info-text">Даты: <span>NN сентября</span><span class="main-date-time">19:00 мск</span></p>
+                  <p class="main-info-text">Даты: <span>25 сентября</span><span class="main-date-time">19:00 мск</span></p>
                   <p class="main-info-text">Автор: <span>Василий Попов</span></p>
                 </div>
                 <div class="button-wrapper"><a class="button button-brown button-up" href="#prices">Записаться</a></div>
@@ -65,7 +67,7 @@
             <li>Вы будете под контролем специалистов, которые вовремя скорректируют ваши действия таким образом, чтобы вы выполняли всё с максимальным комфортом для вас самих</li>
             <li>Вместе с вами будет проходить обучение еще сотня участников, у которых вы всегда сможете спросить совета или поделиться своим опытом</li>
           </ul>
-          <div class="button-wrapper button-wrapper-center"><a class="button button-up button-why" href="#prices">Мне это необходимо</a></div><img class="why-img" src="../img/images/reach.png" alt="Ин/Янь"/>
+          <div class="button-wrapper button-wrapper-center"><a class="button button-up button-why" href="#prices">Мне это необходимо</a></div>
         </div>
       </section>
       <section id="plan">
@@ -139,7 +141,7 @@
           </div>
         </div>
       </section>
-      <setctio id="get">
+      <section id="get">
         <div class="container">
           <h3 class="general-title">Что вы получите пройдя курс:</h3>
           <div class="get-items">
@@ -184,29 +186,37 @@
                 </ul>
               </div>
             </div>
-            <div class="button-wrapper button-wrapper-center"><a class="button button-up" href="#prices">Иду на курс</a></div>
-          </div><img class="plan-img" src="../img/images/plan.png" alt="Картинка блока"/>
+            <div class="button-wrapper button-wrapper-center"><a class="button button-up button-get" href="#prices">Иду на курс</a></div>
+          </div><img class="get-img" src="../img/images/plan.png" alt="Картинка блока"/>
         </div>
-      </setctio>
+      </section>
       <section id="prices">
-        <div class="container">
+        <div class="container"><img class="prices-img prices-img-1" src="../img/images/reach.png" alt="ИньЯн"/>
           <div class="packet">
-            <div class="packet-title">
-              <h4 class="packet-head-title"><small>Обучающий курс</small>=head_title</h4>
+            <div class="packet-head">
+              <h4 class="packet-head-title"><small>Обучающий курс</small>«Третий глаз»
+              </h4>
               <p class="packet-head-text">10 уроков</p><a class="more-button" href="#Modal">подробнее...</a>
             </div>
-            <div class="packet-body">
+            <div class="packet-body"><?php if($now < $dates[1]){;?>
               <p class="cost cost-full">Стоимость:<span>14 900р.</span></p>
-              <p class="cost cost-sale">Скидка:<span>2 000р.</span></p>
-              <p class="cost cost-today">Стоимость сегодня:<span>12 900р.</span></p>
-              <div class="button-wrapper button-wrapper-center"><a class="button" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1168&clean=true&lg=ru" target="_blank">Записаться</a></div>
+              <p class="cost cost-sale">Скидка:<span id="sale"><?=$sale;?></span></p>
+              <p class="cost cost-today">Стоимость сегодня:<span id="today"><?=$today;?></span></p>
+              <div class="button-wrapper button-wrapper-center"><a class="button" href="<?=$link;?>" target="_blank" id="link">Записаться</a></div><?php } else {;?>
+              <p class="cost cost-full">Стоимость:<span class="unbroken">14 900р.</span></p>
+              <div class="button-wrapper button-wrapper-center"><a class="button" href="<?=$link;?>" target="_blank">Записаться</a></div><?php };?>
             </div>
-          </div>
+          </div><?php if($now < $dates[2]):?>
           <div class="prepayment">
             <h4 class="prepayment-title">Акция!</h4>
-            <p class="prepayment-text">Платите <span>1 000р., </span>бонусом получаете <span>1 000р.</span> На счет зачисляется <span>2 000р.. </span></p>
-            <div class="button-wrapper"><a class="button button-prepayment" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1174&clean=true&lg=ru" target="_blank">Оплатить 1 000р.</a></div>
-          </div>
+            <p class="prepayment-text">Платите <span>1 000р., </span> бонусом получаете <span>1 000р.</span><br/>На счет зачисляется <span>2 000р.</span></p>
+            <div class="button-wrapper"><a class="button button-prepayment" href="<?=$prepLink;?>" target="_blank" id="prepLink">Оплатить 1 000р.</a></div>
+          </div><?php endif;?>
+<?php if($now < $dates[1]):?>
+          <div class="timer hide">
+            <h4 class="timer-title">Скидка уменьшится через:</h4>
+            <div class="clock"></div>
+          </div><?php endif;?><img class="prices-img prices-img-2" src="../img/images/reach.png" alt="ИньЯн"/>
         </div>
       </section>
       <section id="author">
@@ -250,6 +260,18 @@
               </div>
               <div class="col-md-6">
                 <div class="video-wrapper video-wrapper-rev" data-youtube="eS7i4s_mMX0" data-img="../img/revs/video-2.jpg"><img src="../img/revs/video-2.jpg" alt="Отзыв 2"/>
+                  <div class="yt-button"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="video-wrapper video-wrapper-rev" data-youtube="t8rlLAoIXZI" data-img="../img/revs/video-4.jpg"><img src="../img/revs/video-4.jpg" alt="Отзыв 4"/>
+                  <div class="yt-button"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="video-wrapper video-wrapper-rev" data-youtube="aFVDWQMlPYc" data-img="../img/revs/video-5.jpg"><img src="../img/revs/video-5.jpg" alt="Отзыв 5"/>
                   <div class="yt-button"></div>
                 </div>
               </div>
