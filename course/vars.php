@@ -1,7 +1,11 @@
 <?php
 
+$videos = array('', '', '');
+$hides = array('', '', '');
+
+
 $now = strtotime('now');
-$dates = array(strtotime('2021-09-22'), strtotime('2021-09-23'), strtotime('2021-09-24'));
+$dates = array(strtotime('2021-09-22'), strtotime('2021-09-23'), strtotime('2021-09-24'), strtotime('2021-09-27'));
 
 $todays = array('12 900р.', '13 900р.');
 $sales = array('2 000р.', '1 000р.');

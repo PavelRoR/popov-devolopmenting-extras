@@ -213,7 +213,7 @@
             <div class="button-wrapper"><a class="button button-prepayment" href="<?=$prepLink;?>" target="_blank" id="prepLink">Оплатить 1 000р.</a></div>
           </div><?php endif;?>
 <?php if($now < $dates[1]):?>
-          <div class="timer hide">
+          <div class="timer">
             <h4 class="timer-title">Скидка уменьшится через:</h4>
             <div class="clock"></div>
           </div><?php endif;?><img class="prices-img prices-img-2" src="../img/images/reach.png" alt="ИньЯн"/>
@@ -284,6 +284,46 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="recs">
+        <div class="container"><?php if($now < $dates[3]){;?>
+          <h3 class="general-title">Записи мастер-класса</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="rec">
+                <h4 class="rec-title">Запись мастер-класса от 21.09.21</h4>
+                <div class="video-wrapper video-wrapper-rec">
+                  <iframe src="https://youtube.com/embed/<?=$videos[0];?>?modestbranding=1" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+                <p class="rec-text <?=$hides[0];?>">Запись мастер-класса появится здесь 22.09.21, после 13:00 (мск)</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rec">
+                <h4 class="rec-title">Запись мастер-класса от 22.09.21</h4>
+                <div class="video-wrapper video-wrapper-rec">
+                  <iframe src="https://youtube.com/embed/<?=$videos[1];?>?modestbranding=1" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+                <p class="rec-text <?=$hides[1];?>">Запись мастер-класса появится здесь 23.09.21, после 13:00 (мск)</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="rec">
+                <h4 class="rec-title">Запись мастер-класса от 23.09.21</h4>
+                <div class="video-wrapper video-wrapper-rec">
+                  <iframe src="https://youtube.com/embed/<?=$videos[2];?>?modestbranding=1" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+                <p class="rec-text <?=$hides[2];?>">Запись мастер-класса появится здесь 24.09.21, после 13:00 (мск)</p>
+              </div>
+            </div>
+          </div>
+          <p class="recs-text">Записи занятий будут в свободном доступе до 27.09.21</p><?php } else {;?>
+          <h3 class="general-title general-title-center">Записей мастер-класса более нет в свободном доступе</h3>
+          <p class="recs-text-2">Но Вы можете приобрести их полные версии всего за 590р. и радоваться жизни вместе с теми, кто их уже смотрел</p>
+          <div class="button-wrapper button-wrapper-center"><a class="button" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1180&clean=true&lg=ru" target="_blank">Купить записи</a></div><?php };?>
         </div>
       </section>
       <section id="last">

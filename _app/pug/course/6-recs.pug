@@ -1,0 +1,30 @@
+section#recs
+	.container
+		<?php if($now < $dates[3]){;?>
+		+gt('', 'Записи мастер-класса')
+		.row
+			.col-md-6
+				.rec
+					h4.rec-title Запись мастер-класса от 21.09.21
+					.video-wrapper.video-wrapper-rec
+						iframe(src!="https://youtube.com/embed/<?=$videos[0];?>?modestbranding=1" allowfullscreen)
+					p.rec-text(class!='<?=$hides[0];?>') Запись мастер-класса появится здесь 22.09.21, после 13:00 (мск)
+			.col-md-6
+				.rec
+					h4.rec-title Запись мастер-класса от 22.09.21
+					.video-wrapper.video-wrapper-rec
+						iframe(src!="https://youtube.com/embed/<?=$videos[1];?>?modestbranding=1" allowfullscreen)
+					p.rec-text(class!='<?=$hides[1];?>') Запись мастер-класса появится здесь 23.09.21, после 13:00 (мск)
+		.row
+			.col-md-6.col-md-offset-3
+				.rec
+					h4.rec-title Запись мастер-класса от 23.09.21
+					.video-wrapper.video-wrapper-rec
+						iframe(src!="https://youtube.com/embed/<?=$videos[2];?>?modestbranding=1" allowfullscreen)
+					p.rec-text(class!='<?=$hides[2];?>') Запись мастер-класса появится здесь 24.09.21, после 13:00 (мск)
+		p.recs-text Записи занятий будут в свободном доступе до 27.09.21
+		<?php } else {;?>
+		h3.general-title.general-title-center Записей мастер-класса более нет в свободном доступе
+		p.recs-text-2 Но Вы можете приобрести их полные версии всего за 590р. и радоваться жизни вместе с теми, кто их уже смотрел
+		+b('button-wrapper-center','','https://shop.mv-centr.ru/?r=ordering/cart/as1&id=1180&clean=true&lg=ru','Купить записи', '_blank')
+		<?php };?>
